@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <script src="./jquery-3.6.3.min.js"></script> 
+    <title>Bingo</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: green;
+        }
+        #tirarBolas {
+            width: 20%;
+            height: 200px;
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .bola {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bola p{
+            color:white
+        }
+        #bolasDisponibles {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 5px;   
+         }
+         #carton {
+             display: flex;
+             flex-wrap: wrap;
+             column-gap: 5px;
+             row-gap: 5px;
+             width: 250px;
+         }
+         button {
+             background-color: blanchedalmond;
+             border-radius: 8px;
+             
+             height: 40px;
+             font-size: 18pt;
+             margin-top:20px;
+             margin-left: 90px;
+         }
+         #equis img {
+            width: 50px;
+            height: 50px;
+            opacity: 0.7;
+        }
+        
+        #equis {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div id="tirarBolas"> 
+        <h1>Bola de Bingo</h1><br>
+        <div class="bola"><p id="bolaSacada"></p></div>
+    </div>
+    <div id="bolasDisponibles"> 
+        <!-- Esto irá comentado en la entrega final, solo es como muestra de cómo se muestran las bolas
+        <div class="bola"><p>1</p></div>
+        <div class="bola"><p>2</p></div>
+        <div class="bola"><p>3</p></div>
+        <div class="bola"><p>4</p></div>
+        <div class="bola"><p>5</p></div> -->  
+    </div>
+</div>
+<h2>Cartón</h2>
+<div id="carton">
+   <!--Esto irá comentado en la entrega final, solo es como muestra de cómo se muestran las bolas
+    <div class="bola"><p>2</p></div>
+    <div class="bola"><p>10</p></div>
+    <div class="bola"><p>8</p></div>
+    <div class="bola"><p>3</p></div>
+    <div class="bola" style="background-color:blue"><p>2</p>
+        <div id="equis"><img src="images/equis.png" alt=""></div>
+    </div>
+    <div class="bola"><p>7</p></div>
+    <div class="bola"><p>1</p></div>
+    <div class="bola"><p>9</p></div>
+    <div class="bola"><p>5</p></div>
+    <div class="bola"><p>4</p></div>
+    <div class="bola"><p>6</p></div>-->
+</div>
+<button id="btnJugar" onclick="jugar()" style="visibility: hidden;">Jugar</button>
+<button onclick="colocarBolas()">Colocar Bolas</button>
+</body>
+</html>
